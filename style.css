@@ -1,118 +1,121 @@
 body {
-  margin: 0;
-  overflow: hidden;
+   margin: 0;
+   overflow: hidden;
 }
 
 .bg-wrap {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
+   position: fixed;
+   z-index: -1;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   overflow: hidden;
 }
 
 .left-bg {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 1200px;
-  background: url("./img/bg-left.png") repeat-y;
+   flex-shrink: 0;
+   width: 100%;
+   max-width: 1200px;
+   background: url("./img/bg-left.png") repeat-y;
 }
 
 .center-bg,
 .right-bg {
-  display: none;
+   display: none;
 }
 
 @media only screen and (min-width: 1200px) {
-  .right-bg {
-    display: block;
-    flex-grow: 1;
-    background: url("./img/bg-right.png") repeat-y;
-  }
+   .right-bg {
+      display: block;
+      flex-grow: 1;
+      background: url("./img/bg-right.png") repeat-y;
+   }
 }
 
 @media only screen and (min-width: 2400px) {
-  .right-bg {
-    width: 1200px;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
+   .right-bg {
+      width: 1200px;
+      flex-grow: 0;
+      flex-shrink: 0;
+   }
 
-  .center-bg {
-    display: block;
-    flex-grow: 1;
-    background: url("./img/bg-center.png") repeat;
-  }
+   .center-bg {
+      display: block;
+      flex-grow: 1;
+      background: url("./img/bg-center.png") repeat;
+   }
 }
 
 .points-wrap {
-  position: fixed;
-  top: max(10px, 1vmax);
-  left: max(10px, 1vmax);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: max(16px, 1.6vmax);
-  font-weight: bold;
-  color: #961e25;
-  display: flex;
-  gap: 10px;
-  padding: max(2px, 0.2vmax) max(8px, 0.8vmax);
-  border-radius: max(2px, 0.2vmax);
-  user-select: none;
+   position: fixed;
+   top: max(10px, 1vmax);
+   left: max(10px, 1vmax);
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: max(16px, 1.6vmax);
+   font-weight: bold;
+   color: #961e25;
+   display: flex;
+   gap: 10px;
+   padding: max(2px, 0.2vmax) max(8px, 0.8vmax);
+   border-radius: max(2px, 0.2vmax);
+   user-select: none;
 }
 
 .score-wrap {
-  background-color: #231f20;
-  padding: max(2px, 0.2vmax) max(8px, 0.8vmax);
-  border-radius: max(2px, 0.2vmax);
+   background-color: #231f20;
+   padding: max(2px, 0.2vmax) max(8px, 0.8vmax);
+   border-radius: max(2px, 0.2vmax);
 }
 
 .best-wrap {
-  background-color: #231f20;
-  padding: max(2px, 0.2vmax) max(8px, 0.8vmax);
-  border-radius: max(2px, 0.2vmax);
+   background-color: #231f20;
+   padding: max(2px, 0.2vmax) max(8px, 0.8vmax);
+   border-radius: max(2px, 0.2vmax);
 }
 
 .wasted {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  max-width: 450px;
-  flex-direction: column; 
-  align-items: flex-end;
-}
-.wasted img{
-  width: 100%;
+   display: none;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 60%;
+   max-width: 450px;
+   flex-direction: column;
+   align-items: flex-end;
 }
 
-.play-again { 
-  cursor: pointer;
-  text-align: right;
-  margin-top: 20px;
-  font-weight: 900;
-  color: #961e25;
-  border: 0;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background: #231f20;
-  border-radius: 10px;
-  padding: 0px 8px 5px 8px;
-  @media (max-width: 400px){
+.wasted img {
+   width: 100%;
+}
+
+.play-again {
+   cursor: pointer;
+   text-align: right;
+   margin-top: 20px;
+   font-weight: 900;
+   color: #961e25;
+   border: 0;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   background: #231f20;
+   border-radius: 10px;
+   padding: 0px 8px 5px 8px;
+
+   @media (max-width: 400px) {
       padding: 0px 7px 4px 7px;
-  }
+   }
 }
 
 .play-again span {
-  letter-spacing: -2px;
-  font-size: 24px;
-  font-weight: 900;
-  color: #961e25;
-  @media (max-width: 400px){
+   letter-spacing: -2px;
+   font-size: 24px;
+   font-weight: 900;
+   color: #961e25;
+
+   @media (max-width: 400px) {
       font-size: 18px;
       letter-spacing: -1px;
-  }
+   }
 }
